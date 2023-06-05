@@ -6,14 +6,27 @@
 //
 
 import Foundation
+import Combine
 
 class BankListViewModel: ObservableObject {
     @Published var banks = [Bank]()
     
-    init() {
-        self.banks = [
-            Bank(id: "1", bankName: "Paga Todo", description: "Banco Paga Todo es Para Todos", age: 10, url: "url"),
-            Bank(id: "2", bankName: "BBVA Bancomer", description: "BBVA Bancomer Creando Oportunidades", age: 10, url: "url"),
-        ]
+    private let repository: BanksRepository
+    private var disposables = Set<AnyCancellable>()
+    
+    init(repository: BanksRepository) {
+        self.repository = repository
+        fetchBanks()
+    }
+    
+    private func fetchBanks() {
+        repository.fetchBanks()
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                print(completion)
+            } receiveValue: { [weak self] banks in
+                self?.banks = banks
+            }
+            .store(in: &disposables)
     }
 }

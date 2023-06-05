@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BankListView: View {
-    @ObservedObject private var viewModel = BankListViewModel()
+    @ObservedObject private var viewModel = BankListViewModel(repository: BanksRepositoryImpl())
     
     var body: some View {
         NavigationView {
