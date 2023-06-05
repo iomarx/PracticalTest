@@ -12,8 +12,8 @@ class BankListViewModel: ObservableObject {
     
     init() {
         self.banks = [
-            Bank(bankName: "Paga Todo", description: "Banco Paga Todo es Para Todos", age: 10, url: "url"),
-            Bank(bankName: "BBVA Bancomer", description: "BBVA Bancomer Creando Oportunidades", age: 10, url: "url"),
+            Bank(id: "1", bankName: "Paga Todo", description: "Banco Paga Todo es Para Todos", age: 10, url: "url"),
+            Bank(id: "2", bankName: "BBVA Bancomer", description: "BBVA Bancomer Creando Oportunidades", age: 10, url: "url"),
         ]
     }
 }

@@ -11,13 +11,15 @@ struct BankListView: View {
     @ObservedObject private var viewModel = BankListViewModel()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(viewModel.banks) { bank in
+            HStack {
+                Image(systemName: "creditcard")
+                VStack(alignment: .leading) {
+                    Text(bank.bankName).font(.title)
+                    Text(bank.description).font(.body)
+                }
+            }
         }
-        .padding()
     }
 }
 

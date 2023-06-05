@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Bank {
+struct Bank: Identifiable {
+    let id: String
     let bankName: String
     let description: String
     let age: Int
