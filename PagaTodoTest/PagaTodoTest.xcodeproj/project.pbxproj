@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E5B339442A2E6F74004C7A06 /* PagaTodoTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339432A2E6F74004C7A06 /* PagaTodoTestApp.swift */; };
-		E5B339462A2E6F74004C7A06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339452A2E6F74004C7A06 /* ContentView.swift */; };
+		E5B339462A2E6F74004C7A06 /* BankListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339452A2E6F74004C7A06 /* BankListView.swift */; };
 		E5B339482A2E6F76004C7A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5B339472A2E6F76004C7A06 /* Assets.xcassets */; };
 		E5B3394B2A2E6F76004C7A06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5B3394A2A2E6F76004C7A06 /* Preview Assets.xcassets */; };
 		E5B339532A2E703A004C7A06 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339522A2E703A004C7A06 /* Bank.swift */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		E5B339402A2E6F74004C7A06 /* PagaTodoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagaTodoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B339432A2E6F74004C7A06 /* PagaTodoTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagaTodoTestApp.swift; sourceTree = "<group>"; };
-		E5B339452A2E6F74004C7A06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E5B339452A2E6F74004C7A06 /* BankListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankListView.swift; sourceTree = "<group>"; };
 		E5B339472A2E6F76004C7A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5B3394A2A2E6F76004C7A06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5B339522A2E703A004C7A06 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
@@ -55,10 +55,10 @@
 		E5B339422A2E6F74004C7A06 /* PagaTodoTest */ = {
 			isa = PBXGroup;
 			children = (
+				E5B339572A2E70CB004C7A06 /* View */,
 				E5B339542A2E7084004C7A06 /* ViewModel */,
 				E5B339512A2E7030004C7A06 /* Model */,
 				E5B339432A2E6F74004C7A06 /* PagaTodoTestApp.swift */,
-				E5B339452A2E6F74004C7A06 /* ContentView.swift */,
 				E5B339472A2E6F76004C7A06 /* Assets.xcassets */,
 				E5B339492A2E6F76004C7A06 /* Preview Content */,
 			);
@@ -87,6 +87,14 @@
 				E5B339552A2E70A5004C7A06 /* BankListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5B339572A2E70CB004C7A06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5B339452A2E6F74004C7A06 /* BankListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B339532A2E703A004C7A06 /* Bank.swift in Sources */,
-				E5B339462A2E6F74004C7A06 /* ContentView.swift in Sources */,
+				E5B339462A2E6F74004C7A06 /* BankListView.swift in Sources */,
 				E5B339562A2E70A5004C7A06 /* BankListViewModel.swift in Sources */,
 				E5B339442A2E6F74004C7A06 /* PagaTodoTestApp.swift in Sources */,
 			);

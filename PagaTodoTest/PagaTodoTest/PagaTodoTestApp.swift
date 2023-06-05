@@ -11,7 +11,7 @@ import SwiftUI
 struct PagaTodoTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BankListView()
         }
     }
 }
