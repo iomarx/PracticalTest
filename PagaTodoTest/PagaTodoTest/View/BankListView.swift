@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BankListView: View {
+    @ObservedObject private var viewModel = BankListViewModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
