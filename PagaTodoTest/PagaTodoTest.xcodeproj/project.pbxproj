@@ -16,6 +16,7 @@
 		E5B3395A2A2E735E004C7A06 /* BanksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339592A2E735E004C7A06 /* BanksRepository.swift */; };
 		E5B3395C2A2E737C004C7A06 /* BanksRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3395B2A2E737C004C7A06 /* BanksRepositoryImpl.swift */; };
 		E5B339632A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5B339612A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld */; };
+		E5B339662A2E820C004C7A06 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339652A2E820C004C7A06 /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E5B339592A2E735E004C7A06 /* BanksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksRepository.swift; sourceTree = "<group>"; };
 		E5B3395B2A2E737C004C7A06 /* BanksRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksRepositoryImpl.swift; sourceTree = "<group>"; };
 		E5B339622A2E80EB004C7A06 /* BanksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BanksDataModel.xcdatamodel; sourceTree = "<group>"; };
+		E5B339652A2E820C004C7A06 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		E5B339512A2E7030004C7A06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5B339642A2E81B3004C7A06 /* CoreData */,
 				E5B339582A2E7340004C7A06 /* Repository */,
 				E5B339522A2E703A004C7A06 /* Bank.swift */,
 			);
@@ -109,9 +112,17 @@
 			children = (
 				E5B339592A2E735E004C7A06 /* BanksRepository.swift */,
 				E5B3395B2A2E737C004C7A06 /* BanksRepositoryImpl.swift */,
-				E5B339612A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		E5B339642A2E81B3004C7A06 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E5B339612A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld */,
+				E5B339652A2E820C004C7A06 /* PersistenceController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				E5B3395A2A2E735E004C7A06 /* BanksRepository.swift in Sources */,
 				E5B339442A2E6F74004C7A06 /* PagaTodoTestApp.swift in Sources */,
 				E5B339632A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld in Sources */,
+				E5B339662A2E820C004C7A06 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,8 +411,7 @@
 				E5B339622A2E80EB004C7A06 /* BanksDataModel.xcdatamodel */,
 			);
 			currentVersion = E5B339622A2E80EB004C7A06 /* BanksDataModel.xcdatamodel */;
-			name = BanksDataModel.xcdatamodeld;
-			path = ../BanksDataModel.xcdatamodeld;
+			path = BanksDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
