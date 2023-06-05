@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Bank: Identifiable {
-    let id: String
+struct Bank: Identifiable, Codable {
+    let id: String = UUID().uuidString
     let bankName: String
     let description: String
     let age: Int

@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 class BankListViewModel: ObservableObject {
+    
     @Published var banks = [Bank]()
     
     private let repository: BanksRepository
@@ -23,7 +24,7 @@ class BankListViewModel: ObservableObject {
         repository.fetchBanks()
             .receive(on: DispatchQueue.main)
             .sink { completion in
-                print(completion)
+                print("completion = \(completion)")
             } receiveValue: { [weak self] banks in
                 self?.banks = banks
             }
