@@ -11,6 +11,8 @@ import Combine
 class BankListViewModel: ObservableObject {
     
     @Published var banks = [Bank]()
+    @Published var hasError = false
+    @Published var error = ""
     
     private let repository: BanksRepository
     private var disposables = Set<AnyCancellable>()
@@ -23,9 +25,10 @@ class BankListViewModel: ObservableObject {
     private func fetchBanks() {
         repository.fetchBanks()
             .receive(on: DispatchQueue.main)
-            .sink { completion in
+            .sink { [weak self] completion in
                 if case .failure(let error) = completion {
-                    print("completion = \(error)")
+                    self?.error = error.localizedDescription
+                    self?.hasError = true
                 }
             } receiveValue: { [weak self] banks in
                 print("receive value = \(banks)")

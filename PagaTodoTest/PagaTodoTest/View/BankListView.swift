@@ -21,6 +21,9 @@ struct BankListView: View {
             List(viewModel.banks) { bank in
                 BankItemView(bank: bank)
             }
+            .alert(isPresented: $viewModel.hasError) {
+                Alert(title: Text("Alerta"), message: Text(viewModel.error))
+            }
         }
     }
 }

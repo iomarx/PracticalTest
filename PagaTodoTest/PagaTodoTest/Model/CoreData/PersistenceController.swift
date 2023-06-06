@@ -24,14 +24,4 @@ struct PersistenceController {
     var context: NSManagedObjectContext {
         container.viewContext
     }
-    
-    func saveContext() {
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                print("Saving Context error: \(error)")
-            }
-        }
-    }
 }
