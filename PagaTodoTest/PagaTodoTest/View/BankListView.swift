@@ -24,6 +24,7 @@ struct BankListView: View {
             .alert(isPresented: $viewModel.hasError) {
                 Alert(title: Text("Alerta"), message: Text(viewModel.error))
             }
+            .navigationBarTitle("Bancos")
         }
     }
 }
