@@ -24,8 +24,11 @@ class BankListViewModel: ObservableObject {
         repository.fetchBanks()
             .receive(on: DispatchQueue.main)
             .sink { completion in
-                print("completion = \(completion)")
+                if case .failure(let error) = completion {
+                    print("completion = \(error)")
+                }
             } receiveValue: { [weak self] banks in
+                print("receive value = \(banks)")
                 self?.banks = banks
             }
             .store(in: &disposables)
