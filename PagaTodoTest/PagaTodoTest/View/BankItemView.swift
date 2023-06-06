@@ -16,12 +16,16 @@ struct BankItemView: View {
             let url = URL(string: bank.url)
             
             if #available(iOS 15.0, *) {
-                AsyncImage(url: url) { image in
-                    image.resizable()
-                        .scaledToFit()
-                        .cornerRadius(8)
-                } placeholder: {
-                    ProgressView()
+                AsyncImage(url: url) { phase in
+                    if let image = phase.image {
+                        image.resizable()
+                            .scaledToFit()
+                            .cornerRadius(8)
+                    } else if phase.error != nil {
+                        Color.red.cornerRadius(8)
+                    } else {
+                        ProgressView()
+                    }
                 }
                 .frame(width: 70)
             } else {
