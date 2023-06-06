@@ -19,6 +19,7 @@ struct BankItemView: View {
                 AsyncImage(url: url) { image in
                     image.resizable()
                         .scaledToFit()
+                        .cornerRadius(8)
                 } placeholder: {
                     ProgressView()
                 }
@@ -27,6 +28,7 @@ struct BankItemView: View {
                 WebImage(url: url)
                     .scaledToFit()
                     .frame(width: 70)
+                    .cornerRadius(8)
             }
             VStack(alignment: .leading) {
                 Text(bank.bankName).font(.title)
