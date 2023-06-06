@@ -22,6 +22,7 @@
 		E5B3396D2A2EBBC5004C7A06 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3396C2A2EBBC5004C7A06 /* LocalDataSource.swift */; };
 		E5B3396F2A2EBBEF004C7A06 /* NetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3396E2A2EBBEF004C7A06 /* NetworkDataSource.swift */; };
 		E5B339712A2EBC08004C7A06 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339702A2EBC08004C7A06 /* CoreDataDataSource.swift */; };
+		E5B339742A2EC44B004C7A06 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E5B339732A2EC44B004C7A06 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B339742A2EC44B004C7A06 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +166,9 @@
 			dependencies = (
 			);
 			name = PagaTodoTest;
+			packageProductDependencies = (
+				E5B339732A2EC44B004C7A06 /* SDWebImageSwiftUI */,
+			);
 			productName = PagaTodoTest;
 			productReference = E5B339402A2E6F74004C7A06 /* PagaTodoTest.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +197,9 @@
 				Base,
 			);
 			mainGroup = E5B339372A2E6F74004C7A06;
+			packageReferences = (
+				E5B339722A2EC44B004C7A06 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = E5B339412A2E6F74004C7A06 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -433,6 +441,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E5B339722A2EC44B004C7A06 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E5B339732A2EC44B004C7A06 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5B339722A2EC44B004C7A06 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E5B339612A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld */ = {

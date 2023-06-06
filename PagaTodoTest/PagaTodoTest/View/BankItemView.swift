@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct BankItemView: View {
     let bank: Bank
     
     var body: some View {
         HStack {
+            let url = URL(string: bank.url)
+            
             if #available(iOS 15.0, *) {
-                AsyncImage(url: URL(string: bank.url)) { image in
+                AsyncImage(url: url) { image in
                     image.resizable()
                         .scaledToFit()
                 } placeholder: {
@@ -21,7 +24,8 @@ struct BankItemView: View {
                 }
                 .frame(width: 70)
             } else {
-                // Fallback on earlier versions
+                WebImage(url: url)
+                    .frame(width: 70)
             }
             VStack(alignment: .leading) {
                 Text(bank.bankName).font(.title)
