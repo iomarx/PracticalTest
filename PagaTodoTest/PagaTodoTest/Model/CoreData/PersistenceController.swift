@@ -12,8 +12,13 @@ struct PersistenceController {
     
     let container: NSPersistentContainer
     
-    init() {
+    init(inMemory: Bool = false) {
         self.container = NSPersistentContainer(name: "BanksDataModel")
+        
+        if inMemory {
+            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        }
+        
         container.loadPersistentStores { storeDescritpion, error in
             if let error {
                 fatalError("Container load failed: \(error)")
