@@ -15,7 +15,7 @@ class BankListViewModel: ObservableObject {
     @Published var error = ""
     
     private let repository: BanksRepository
-    private var disposables = Set<AnyCancellable>()
+    private var cancellables = Set<AnyCancellable>()
     
     init(repository: BanksRepository) {
         self.repository = repository
@@ -33,6 +33,6 @@ class BankListViewModel: ObservableObject {
             } receiveValue: { [weak self] banks in
                 self?.banks = banks
             }
-            .store(in: &disposables)
+            .store(in: &cancellables)
     }
 }
