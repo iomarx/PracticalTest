@@ -89,7 +89,7 @@ extension BankEntity {
     var toBankModel: Bank {
         Bank(bankName: self.bankName ?? "",
              description: self.bankDescription ?? "",
-             age: Int(self.age) ?? 0,
+             age: Int(self.age),
              url: self.url ?? "")
     }
 }

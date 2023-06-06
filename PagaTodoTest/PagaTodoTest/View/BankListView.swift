@@ -20,7 +20,7 @@ struct BankListView: View {
                         Text(bank.description).font(.body)
                     }
                 }
-            }.navigationTitle("Banks")
+            }
         }
     }
 }
