@@ -10,10 +10,12 @@ import Combine
 import CoreData
 
 struct CoreDataDataSource: LocalDataSource {
+    static let BANK_ENTITY_NAME = "BankEntity"
+    
     let context: NSManagedObjectContext
     
     func getBanks() -> AnyPublisher<[Bank], Error> {
-        let request = NSFetchRequest<BankEntity>(entityName: "BankEntity")
+        let request = NSFetchRequest<BankEntity>(entityName: Self.BANK_ENTITY_NAME)
         
         return Future<[Bank], Error> { promise in
             do {

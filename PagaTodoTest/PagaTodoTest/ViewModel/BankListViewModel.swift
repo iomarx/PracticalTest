@@ -31,7 +31,6 @@ class BankListViewModel: ObservableObject {
                     self?.hasError = true
                 }
             } receiveValue: { [weak self] banks in
-                print("receive value = \(banks)")
                 self?.banks = banks
             }
             .store(in: &disposables)

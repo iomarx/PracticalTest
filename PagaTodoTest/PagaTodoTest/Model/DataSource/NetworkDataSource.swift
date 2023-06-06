@@ -10,8 +10,10 @@ import Combine
 
 struct NetworkDataSource: RemoteDataSource {
     
+    static let BANKS_ENDPOINT = "https://dev.obtenmas.com/catom/api/challenge/banks"
+    
     func fetchBanks() -> AnyPublisher<[Bank], Error> {
-        let url = URL(string: "https://dev.obtenmas.com/catom/api/challenge/banks")
+        let url = URL(string: Self.BANKS_ENDPOINT)
         
         return URLSession.shared.dataTaskPublisher(for: url!)
             .tryMap { data, response in

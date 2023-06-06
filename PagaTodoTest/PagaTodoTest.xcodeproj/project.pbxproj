@@ -143,8 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				E5B3396A2A2EBBA5004C7A06 /* RemoteDataSource.swift */,
-				E5B3396C2A2EBBC5004C7A06 /* LocalDataSource.swift */,
 				E5B3396E2A2EBBEF004C7A06 /* NetworkDataSource.swift */,
+				E5B3396C2A2EBBC5004C7A06 /* LocalDataSource.swift */,
 				E5B339702A2EBC08004C7A06 /* CoreDataDataSource.swift */,
 			);
 			path = DataSource;
