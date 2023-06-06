@@ -13,13 +13,7 @@ struct BankListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.banks) { bank in
-                HStack {
-                    Image(systemName: "creditcard")
-                    VStack(alignment: .leading) {
-                        Text(bank.bankName).font(.title)
-                        Text(bank.description).font(.body)
-                    }
-                }
+                BankItemView(bank: bank)
             }
         }
     }

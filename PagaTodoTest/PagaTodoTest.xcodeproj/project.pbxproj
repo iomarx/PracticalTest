@@ -17,6 +17,7 @@
 		E5B3395C2A2E737C004C7A06 /* BanksRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3395B2A2E737C004C7A06 /* BanksRepositoryImpl.swift */; };
 		E5B339632A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5B339612A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld */; };
 		E5B339662A2E820C004C7A06 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339652A2E820C004C7A06 /* PersistenceController.swift */; };
+		E5B339682A2EB989004C7A06 /* BankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339672A2EB989004C7A06 /* BankItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E5B3395B2A2E737C004C7A06 /* BanksRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksRepositoryImpl.swift; sourceTree = "<group>"; };
 		E5B339622A2E80EB004C7A06 /* BanksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BanksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		E5B339652A2E820C004C7A06 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		E5B339672A2EB989004C7A06 /* BankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				E5B339452A2E6F74004C7A06 /* BankListView.swift */,
+				E5B339672A2EB989004C7A06 /* BankItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				E5B339532A2E703A004C7A06 /* Bank.swift in Sources */,
 				E5B339462A2E6F74004C7A06 /* BankListView.swift in Sources */,
+				E5B339682A2EB989004C7A06 /* BankItemView.swift in Sources */,
 				E5B339562A2E70A5004C7A06 /* BankListViewModel.swift in Sources */,
 				E5B3395C2A2E737C004C7A06 /* BanksRepositoryImpl.swift in Sources */,
 				E5B3395A2A2E735E004C7A06 /* BanksRepository.swift in Sources */,
