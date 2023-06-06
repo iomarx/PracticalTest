@@ -25,6 +25,7 @@ struct BankItemView: View {
                 .frame(width: 70)
             } else {
                 WebImage(url: url)
+                    .scaledToFit()
                     .frame(width: 70)
             }
             VStack(alignment: .leading) {
