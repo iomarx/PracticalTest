@@ -18,6 +18,10 @@
 		E5B339632A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5B339612A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld */; };
 		E5B339662A2E820C004C7A06 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339652A2E820C004C7A06 /* PersistenceController.swift */; };
 		E5B339682A2EB989004C7A06 /* BankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339672A2EB989004C7A06 /* BankItemView.swift */; };
+		E5B3396B2A2EBBA5004C7A06 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3396A2A2EBBA5004C7A06 /* RemoteDataSource.swift */; };
+		E5B3396D2A2EBBC5004C7A06 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3396C2A2EBBC5004C7A06 /* LocalDataSource.swift */; };
+		E5B3396F2A2EBBEF004C7A06 /* NetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3396E2A2EBBEF004C7A06 /* NetworkDataSource.swift */; };
+		E5B339712A2EBC08004C7A06 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B339702A2EBC08004C7A06 /* CoreDataDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		E5B339622A2E80EB004C7A06 /* BanksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BanksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		E5B339652A2E820C004C7A06 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		E5B339672A2EB989004C7A06 /* BankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankItemView.swift; sourceTree = "<group>"; };
+		E5B3396A2A2EBBA5004C7A06 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		E5B3396C2A2EBBC5004C7A06 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		E5B3396E2A2EBBEF004C7A06 /* NetworkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataSource.swift; sourceTree = "<group>"; };
+		E5B339702A2EBC08004C7A06 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		E5B339512A2E7030004C7A06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5B339692A2EBB9A004C7A06 /* DataSource */,
 				E5B339642A2E81B3004C7A06 /* CoreData */,
 				E5B339582A2E7340004C7A06 /* Repository */,
 				E5B339522A2E703A004C7A06 /* Bank.swift */,
@@ -126,6 +135,17 @@
 				E5B339652A2E820C004C7A06 /* PersistenceController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E5B339692A2EBB9A004C7A06 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E5B3396A2A2EBBA5004C7A06 /* RemoteDataSource.swift */,
+				E5B3396C2A2EBBC5004C7A06 /* LocalDataSource.swift */,
+				E5B3396E2A2EBBEF004C7A06 /* NetworkDataSource.swift */,
+				E5B339702A2EBC08004C7A06 /* CoreDataDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +224,11 @@
 				E5B339562A2E70A5004C7A06 /* BankListViewModel.swift in Sources */,
 				E5B3395C2A2E737C004C7A06 /* BanksRepositoryImpl.swift in Sources */,
 				E5B3395A2A2E735E004C7A06 /* BanksRepository.swift in Sources */,
+				E5B3396B2A2EBBA5004C7A06 /* RemoteDataSource.swift in Sources */,
+				E5B3396F2A2EBBEF004C7A06 /* NetworkDataSource.swift in Sources */,
 				E5B339442A2E6F74004C7A06 /* PagaTodoTestApp.swift in Sources */,
+				E5B339712A2EBC08004C7A06 /* CoreDataDataSource.swift in Sources */,
+				E5B3396D2A2EBBC5004C7A06 /* LocalDataSource.swift in Sources */,
 				E5B339632A2E80EB004C7A06 /* BanksDataModel.xcdatamodeld in Sources */,
 				E5B339662A2E820C004C7A06 /* PersistenceController.swift in Sources */,
 			);
